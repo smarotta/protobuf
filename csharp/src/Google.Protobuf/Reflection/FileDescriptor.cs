@@ -320,7 +320,7 @@ namespace Google.Protobuf.Reflection
         /// depends on C, then the descriptors must be presented in the order C, B, A.) This is compatible
         /// with the order in which protoc provides descriptors to plugins.</param>
         /// <returns>The file descriptors corresponding to <paramref name="descriptorData"/>.</returns>
-        public static IReadOnlyList<FileDescriptor> BuildFromByteStrings(IEnumerable<ByteString> descriptorData)
+        public static IList<FileDescriptor> BuildFromByteStrings(IEnumerable<ByteString> descriptorData)
         {
             ProtoPreconditions.CheckNotNull(descriptorData, nameof(descriptorData));
 
